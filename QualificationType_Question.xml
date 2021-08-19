@@ -1,0 +1,41 @@
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2017-11-06/QuestionForm.xsd">
+    <Overview>
+        <Title>Qualification Test</Title>
+        <Text>
+            Please answer the question below to pass the qualification test
+        </Text>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>number</QuestionIdentifier>
+        <DisplayName>Highest number</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>
+                What was the highest number key shown in the batch of tasks about text relatedness?
+            </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>10</SelectionIdentifier>
+                        <Text>10</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>50</SelectionIdentifier>
+                        <Text>50</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>100</SelectionIdentifier>
+                        <Text>100</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>200</SelectionIdentifier>
+                        <Text>200</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+</QuestionForm>

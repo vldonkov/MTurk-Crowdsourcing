@@ -1,0 +1,87 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<crowd-form answer-format="flatten-objects">
+
+    <crowd-classifier 
+      name="text-relatedness"
+      categories="['Yes', 'No']"
+      header="Does the sentence in Text 1 correctly describe the sentence(s) in Text 2?"
+    >
+      <classification-target>
+        <p>
+            <strong>Text 1: </strong>
+            
+            ${Text1}
+            
+        </p>
+
+        <p>
+            <strong>Text 2: </strong>
+
+            ${Text2}
+            
+        </p>
+        
+        <p>
+            <br>
+        </p>
+        
+        <p>
+            ${Hint}
+        </p>
+        
+        <p style="font-size:80%;"><font color="#A6A6A6">
+            (Number key for revealing the answer to the voluntary question at the bottom of the page. 
+            You have to collect the keys from all 20 tasks in order to unlock the answer 
+            to the question. Please view the full instructions for further detail.)
+        </font></p>
+
+      </classification-target>
+
+      <short-instructions>
+        <p>The task is aimed at recognizing text relatedness.</p>
+
+	    <p>Please select "Yes" if you think that the emotion in <strong>Text 1</strong> relates to the 
+	    emotion the person is experiencing or expressing in <strong>Text 2</strong>. Otherwise choose "No".</p>
+
+	    <p>At the end of this page you can try to guess from which popular social platform 
+	    the Text 2 sentences have been taken. This is entirely voluntary, the answer can be seen after
+	    submitting all 20 tasks.
+	    </p>
+      </short-instructions>
+
+      <full-instructions header="Text Relatedness & Voluntary Question Instructions">
+        <h2>Text Relatedness</h2>
+        <p>The goal of the task is to check whether the sentence in <strong>Text 1</strong> correctly describes
+        the sentence(s) <br>in <strong>Text 2</strong>.</p>
+        <p>The sentence in Text 1 contains a human emotion. Your task is to check whether this human emotion
+        is experienced or expressed in the sentence(s) of Text2. Select "Yes" if that is the case, otherwise
+        select "No".</p>
+        <p>Examples:</p>
+        <p><strong>Text 1: </strong>The person is experiencing or expressing happiness</p>
+        <p><strong>Text 2: </strong>I was feeling really happy today</p>
+        <p>In this case you should select "Yes", because the person is expressing the human
+        emotion of happiness.</p>
+        <p><strong>Text 1: </strong>The person is experiencing or expressing anger</p>
+        <p><strong>Text 2: </strong>It was good to see you today!</p>
+        <p>In this example you should select "No", because the person is most probably
+        not experiencing anger.</p>
+        <h2>Voluntary question</h2>
+        <p>All Text 2 sentences have been taken from one particular social platform. You can try and guess the
+        name of the social platform at the end of the webpage.</p>
+        <p>The guess is entirely voluntary and does not have to be submitted. It does not lead to any bonuses.</p>
+        <p>If you want to check whether your guess is correct, you can collect the number keys from all 20 tasks
+        in the HITs batch. Knowing those keys, you can unlock an <strong>Extra Task</strong> which contains the answer. 
+        The <strong>Extra Task</strong> has already been posted by the same Requester account as the current task.</p>
+      </full-instructions>
+
+    </crowd-classifier>
+
+    <div>
+        <p style="margin-left:0.75em;font-size:110%;"><strong>Can you guess from which <font color="#ED7D31">popular social platform</font> the Text 2 sentences come from?</strong></p>
+        <p style="margin-left:0.75em;"><crowd-input name="Guess" placeholder="(Name the platform)"></crowd-input></p>
+        <p style="margin-left:0.75em;font-size:70%;"><font color="#A6A6A6">* Guessing is optional, will NOT lead to extra bonuses.</font></p>
+        <p><br></p>
+    </div>
+
+</crowd-form>
