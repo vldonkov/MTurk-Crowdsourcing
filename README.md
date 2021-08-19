@@ -29,5 +29,5 @@ General instructions for creating tasks:
 	- df
 	- qual_question
 	- qual_answer
-	(- WorkerID)
+	- (WorkerID)
 11) You can now execute the whole code contained in 200623_Assignment_Part1_Code
